@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>自动化部署|应用管理</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="skin-green sidebar-mini">
+<div class="wrapper">
+  <!-- Main Header -->
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>自动化部署</b></span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Notifications Menu -->
+          <li class="dropdown notifications-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- Inner Menu: contains the notifications -->
+                <ul class="menu">
+                  <li><!-- start notification -->
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <!-- end notification -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks Menu -->
+          <li class="dropdown tasks-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- Inner menu: contains the tasks -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <!-- Task title and progress text -->
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <!-- The progress bar -->
+                      <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span>系统管理员</span>
+            </a>
+            <ul class="dropdown-menu">
+            
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains search and sidebar -->
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="查找...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <!-- Optionally, you can add icons to the links -->
+        <li><a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+        <li class="active"><a href="appmanager.html"><i class="fa fa-cubes"></i> <span>应用管理</span></a></li>
+        <li><a href="imagereg.html"><i class="fa fa-database"></i> <span>镜像仓库</span></a></li>
+        <li><a href="alarm.html"><i class="fa fa-bell"></i> <span>告警策略</span></a></li>
+        <li><a href="log.html"><i class="fa fa-reorder"></i> <span>日志查询</span></a></li>
+      </ul>
+    </section>
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        应用管理
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="../index.html"><i class="fa fa-database"></i>首页</a></li>
+        <li><a href="appmanager.html"><i class="active"></i>应用管理</a></li>
+        <li class="active">创建应用</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <!-- Your Page Content Here -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">应用信息</h3>
+        </div>
+        <!-- form start -->
+        <form role="form">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="appname">应用名称：</label>
+              <input type="text" class="form-control" id="appname" placeholder="请输入应用名称...">
+            </div>
+            <div class="form-group">
+              <label for="imagename">选择镜像：</label>
+              <select class="form-control select2" id="imagename" style="width: 100%;">
+                <option selected="selected"></option>
+                <option>网络大学</option>
+                <option>营销管理系统</option>
+                <option>生产管理系统</option>
+                <option>企业门户</option>
+              </select>
+            </div>            
+            <div class="form-group">
+              <label for="version">镜像版本：</label>
+              <select class="form-control select2" id="version" style="width: 100%;">
+                <option selected="selected"></option>
+                <option>v1.3</option>
+                <option>v1.2</option>
+                <option>v1.1</option>
+                <option>v1.0</option>
+              </select>
+            </div>
+            <div class="from-group">
+            	<label for="number">容器个数：</label>
+              <input type="text" class="form-control" id="number" placeholder="容器个数...">
+            </div>
+            <div class="from-group">
+            	<label>CPU权重</label>
+              <input type="text" class="form-control" id="number" placeholder="CPU权重...">
+            </div>
+            <div class="from-group">
+            	<label>内存</label>
+              <input type="text" class="form-control" id="number" placeholder="内存...">
+            </div>
+            <div class="from-group">
+            	<label for="address">应用地址</label>
+              <input type="text" class="form-control" id="address" placeholder="应用地址...">
+            </div>
+            <div class="form-group">
+              <label for="description">应用描述：</label>
+              <textarea class="form-control" id="description" rows="3" placeholder="应用描述..."></textarea>
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">保存</button>
+            <a href="appmanager.html" class="btn btn-default">取消</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- REQUIRED JS SCRIPTS -->
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- Select2 -->
+<script src="../plugins/select2/select2.full.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $(".select2").select2();
+  });
+</script>
+</body>
+</html>

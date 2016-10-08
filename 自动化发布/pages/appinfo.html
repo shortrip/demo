@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>自动化部署|应用管理</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="skin-green sidebar-mini">
+<div class="wrapper">
+  <!-- Main Header -->
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>自动化部署</b></span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Notifications Menu -->
+          <li class="dropdown notifications-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- Inner Menu: contains the notifications -->
+                <ul class="menu">
+                  <li><!-- start notification -->
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <!-- end notification -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks Menu -->
+          <li class="dropdown tasks-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- Inner menu: contains the tasks -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <!-- Task title and progress text -->
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <!-- The progress bar -->
+                      <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span>系统管理员</span>
+            </a>
+            <ul class="dropdown-menu">
+            
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains search and sidebar -->
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="查找...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <!-- Optionally, you can add icons to the links -->
+        <li><a href="../index.html"><i class="fa fa-home"></i> <span>首页</span></a></li>
+        <li class="active"><a href="appmanager.html"><i class="fa fa-cubes"></i> <span>应用管理</span></a></li>
+        <li><a href="imagereg.html"><i class="fa fa-database"></i> <span>镜像仓库</span></a></li>
+        <li><a href="alarm.html"><i class="fa fa-bell"></i> <span>告警策略</span></a></li>
+        <li><a href="log.html"><i class="fa fa fa-reorder"></i> <span>日志查询</span></a></li>
+      </ul>
+    </section>
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        应用管理
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="../index.html"><i class="fa fa-cubes"></i>首页</a></li>
+        <li><a href="appmanager.html"><i class="active"></i>应用管理</a></li>
+        <li class="active">应用详情</li>
+      </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <!-- Your Page Content Here -->
+      <div class="modal fade bs-example-modal-lg" id="modal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">日志</h4>
+            </div>
+            <div class="modal-body">
+	            <p>2016-09-21T02:13:21.841191000Z Sep 21, 2016 2:13:21 AM org.apache.catalina.core.AprLifecycleListener init</p>
+	            <p>2016-09-21T02:13:21.841340000Z INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib</p>
+	            <p>2016-09-21T02:13:22.206246000Z Sep 21, 2016 2:13:22 AM org.apache.coyote.http11.Http11Protocol init</p>
+	            <p>2016-09-21T02:13:22.206415000Z INFO: Initializing Coyote HTTP/1.1 on http-8080</p>
+	            <p>2016-09-21T02:13:22.209145000Z Sep 21, 2016 2:13:22 AM org.apache.catalina.startup.Catalina load</p>
+	            <p>2016-09-21T02:13:22.209295000Z INFO: Initialization processed in 989 ms</p>
+							<p>2016-09-21T02:13:22.267768000Z Sep 21, 2016 2:13:22 AM org.apache.catalina.core.StandardService start</p>
+							<p>2016-09-21T02:13:22.267956000Z INFO: Starting service Catalina</p>
+							<p>2016-09-21T02:13:22.274978000Z Sep 21, 2016 2:13:22 AM org.apache.catalina.core.StandardEngine start</p>
+							<p>2016-09-21T02:13:22.275128000Z INFO: Starting Servlet Engine: Apache Tomcat/6.0.45</p>
+							<p>2016-09-21T02:13:22.300515000Z Sep 21, 2016 2:13:22 AM org.apache.catalina.startup.HostConfig deployDescriptor</p>
+							<p>2016-09-21T02:13:22.300671000Z INFO: Deploying configuration descriptor host-manager.xml</p>
+							<p>2016-09-21T02:13:23.020378000Z Sep 21, 2016 2:13:23 AM org.apache.catalina.startup.HostConfig deployDescriptor</p>
+							<p>2016-09-21T02:13:23.020543000Z INFO: Deploying configuration descriptor manager.xml</p>
+							<p>2016-09-21T02:13:23.159383000Z Sep 21, 2016 2:13:23 AM org.apache.catalina.startup.HostConfig deployDirectory</p>
+							<p>2016-09-21T02:13:23.159552000Z INFO: Deploying web application directory ROOT</p>
+							<p>2016-09-21T02:13:23.255281000Z Sep 21, 2016 2:13:23 AM org.apache.catalina.startup.HostConfig deployDirectory</p>
+							<p>2016-09-21T02:13:23.255448000Z INFO: Deploying web application directory docs</p>
+							<p>2016-09-21T02:13:23.330264000Z Sep 21, 2016 2:13:23 AM org.apache.catalina.startup.HostConfig deployDirectory</p>
+							<p>2016-09-21T02:13:23.330428000Z INFO: Deploying web application directory examples</p>
+							<p>2016-09-21T02:13:23.623179000Z Sep 21, 2016 2:13:23 AM org.apache.coyote.http11.Http11Protocol start</p>
+							<p>2016-09-21T02:13:23.623328000Z INFO: Starting Coyote HTTP/1.1 on http-8080</p>
+							<p>2016-09-21T02:13:23.703249000Z Sep 21, 2016 2:13:23 AM org.apache.jk.common.ChannelSocket init</p>
+							<p>2016-09-21T02:13:23.703419000Z INFO: JK: ajp13 listening on /0.0.0.0:8009</p>
+							<p>2016-09-21T02:13:23.730210000Z Sep 21, 2016 2:13:23 AM org.apache.jk.server.JkMain start</p>
+							<p>2016-09-21T02:13:23.730373000Z INFO: Jk running ID=0 time=0/47  config=null</p>
+							<p>2016-09-21T02:13:23.745169000Z Sep 21, 2016 2:13:23 AM org.apache.catalina.startup.Catalina start</p>
+							<p>2016-09-21T02:13:23.745326000Z INFO: Server startup in 1534 ms
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Custom Tabs -->
+      <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#tab_1" data-toggle="tab">应用详情</a></li>
+          <li><a href="#tab_2" data-toggle="tab">容器列表</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab_1">
+       			<form role="form">
+          	  <div class="form-group">
+          	    <label for="appname">应用名称：</label>
+          	    <input type="text" class="form-control" id="appname" placeholder="请输入应用名称..." value="生产管理系统" disabled>
+          	  </div>
+          	  <div class="form-group">
+          	    <label for="imagename">对应镜像：</label>
+          	    <select class="form-control select2" id="imagename" style="width: 100%;" disabled>
+          	      <option selected="selected">生产管理系统</option>
+          	      <option>网络大学</option>
+          	      <option>营销管理系统</option>
+          	      <option>企业门户</option>
+          	    </select>
+          	  </div>            
+          	  <div class="form-group">
+          	    <label for="version">当前版本：</label>
+          	    <select class="form-control select2" id="version" style="width: 100%;" disabled>
+          	      <option selected="selected">v1.3</option>
+          	      <option>v1.3</option>
+          	      <option>v1.2</option>
+          	      <option>v1.1</option>
+          	      <option>v1.0</option>
+          	    </select>
+          	  </div>
+          	  <div class="from-group">
+          	  	<label for="number">容器个数：</label>
+          	    <input type="text" class="form-control" id="number" placeholder="容器个数..." value="4" disabled>
+          	  </div>
+          	  <div class="from-group">
+          	  	<label for="address">应用地址</label>
+          	    <input type="text" class="form-control" id="address" placeholder="应用地址..." value="localhost:32300" disabled>
+          	  </div>
+          	  <div class="form-group">
+          	    <label for="description">应用描述：</label>
+          	    <textarea class="form-control" id="description" rows="3" placeholder="应用描述...">生产管理系统应用服务器</textarea>
+          	  </div>
+        		</form>
+          </div>
+          <div class="tab-pane" id="tab_2">
+          	<table class="table table-bordered">
+            	<tr>
+            	  <th style="width: 10px">#</th>
+            	  <th>容器名称</th>
+            	  <th>状态</th>
+            	  <th>运行时长</th>
+            	  <th>CPU权重</th>
+            	  <th>内存</th>
+            	  <th>IP</th>
+            	  <th>节点IP</th>
+            	  <th>操作</th>
+            	</tr>
+            	<tr>
+            	  <td>1.</td>
+            	  <td>tomcat6-ctl-v2-lugup</td>
+            	  <td>
+            	  	<span class="label label-success">运行中</span>
+            	  </td>
+            	  <td>1小时</td>
+            	  <td>-</td>
+            	  <td>-</td>
+            	  <td>10.10.74.7</td>
+            	  <td>10.0.0.20</td>
+            	  <td>
+            	  	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">查看日志</button>
+            	  </td>
+            	</tr>
+            	<tr>
+            	 <td>2.</td>
+            	  <td>tomcat6-ctl-v2-b3snn</td>
+            	  <td>
+            	  	<span class="label label-success">运行中</span>
+            	  </td>
+            	  <td>1小时</td>
+            	  <td>-</td>
+            	  <td>-</td>
+            	  <td>10.10.18.2</td>
+            	  <td>10.0.0.19</td>
+            	  <td>
+            	  	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">查看日志</button>
+            	  </td>
+            	</tr>
+            	<tr>
+            	  <td>3.</td>
+            	  <td>tomcat6-ctl-v2-i9woq</td>
+            	  <td>
+            	  	<span class="label label-success">运行中</span>
+            	  </td>
+            	  <td>1个月</td>
+            	  <td>-</td>
+            	  <td>-</td>
+            	  <td>10.10.74.6</td>
+            	  <td>10.0.0.20</td>
+            	  <td>
+            	  	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">查看日志</button>
+            	  </td>
+            	</tr>
+            	<tr>
+            	 <td>4.</td>
+            	  <td>tomcat6-ctl-v2-1kwhf</td>
+            	  <td>
+            	  	<span class="label label-success">运行中</span>
+            	  </td>
+            	  <td>1个月</td>
+            	  <td>-</td>
+            	  <td>-</td>
+            	  <td>10.10.18.3</td>
+            	  <td>10.0.0.19</td>
+            	  <td>
+            	  	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">查看日志</button>
+            	  </td>
+            	</tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- REQUIRED JS SCRIPTS -->
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+  });
+</script>
+</body>
+</html>
